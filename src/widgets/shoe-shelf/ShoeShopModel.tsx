@@ -6,7 +6,9 @@ import { useCustomizeStore } from "@/features/customize-shoe/useCustomizeStore";
 import { PART_MAPPING, ShoePart } from "@/app/constants";
 
 export function ShoeShopModel() {
-  const { scene } = useGLTF("/assets/shoe-shop-scene.glb");
+  const basePath = import.meta.env.BASE_URL;
+  const modelPath = `${basePath}assets/shoe-shop-scene.glb`;
+  const { scene } = useGLTF(modelPath);
   const { setSelectedMesh, setEditableParts, setCurrentPart } =
     useCustomizeStore();
   const [clonedScene, setClonedScene] = useState<THREE.Group | null>(null);

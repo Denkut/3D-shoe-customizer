@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "vite build && gh-pages -d dist"
   },
+  "homepage": "https://github.com/Denkut/3D-shoe-customizer",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@mantine/core": "^8.2.2",
@@ -34,6 +36,7 @@
     "@types/react-dom": "^19.1.6",
     "@types/toastify-js": "^1.12.4",
     "@vitejs/plugin-react": "^4.5.2",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.5",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
